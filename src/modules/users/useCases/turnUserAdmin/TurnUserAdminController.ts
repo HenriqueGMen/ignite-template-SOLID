@@ -11,7 +11,7 @@ class TurnUserAdminController {
       const id = user_id.toString();
 
       const user = this.turnUserAdminUseCase.execute({ user_id: id });
-      return response.status(201).json({user});
+      return response.status(201).json(user);
     } catch(error) {
       return response.status(404).json({ error: "Cannot turn Admin!"});
     }
